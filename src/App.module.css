@@ -1,0 +1,208 @@
+.app {
+  width: 100vw;
+  height: 100%;
+  min-height: 100vh;
+  background-color: #ecf2f8;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.component {
+  height: 280px;
+  width: 730px;
+  border-radius: 10px;
+
+  background-color: #ffffff;
+  box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.503415);
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.component .image {
+  height: 280px;
+  width: 285px;
+  border-radius: 10px 0px 0px 10px;
+  object-fit: cover;
+}
+
+.component .content {
+  padding: 32px 40px;
+}
+
+.component .content > h1 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.25px;
+  color: #48556a;
+
+  margin-bottom: 12px;
+}
+
+.component .content > p {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.121875px;
+  color: #6e8098;
+  margin-bottom: 20px;
+}
+
+.component .content .footer {
+  width: 100%;
+  height: 40px;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.component .content .footer .avatar {
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+}
+
+.component .content .footer .avatar > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  margin-right: 16px;
+}
+
+.component .content .footer .author > p.name {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.121875px;
+  color: #48556a;
+}
+
+.component .content .footer .author > p.date {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.121875px;
+  color: #9daec2;
+}
+
+.component .content .footer .share {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  background: #ecf2f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.component .content .footer .share .hover {
+  bottom: 60px;
+  right: -108px;
+  position: absolute;
+  width: 248px;
+  height: 55px;
+  border-radius: 10px;
+  background: #48556a;
+  visibility: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 5px;
+  color: #9daec2;
+}
+
+.component .content .footer .share .hover > * {
+  margin-right: 16px;
+}
+
+.component .content .footer .share .hover > :first-child {
+  margin-right: 20px;
+}
+
+.component .content .footer .share .hover > :last-child {
+  margin-right: 0px;
+}
+
+.component .content .footer .share:hover .hover {
+  visibility: visible;
+}
+
+.component .content .footer .share:hover .hover::before {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 55px;
+  left: 112px;
+  content: "";
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #48556a;
+}
+
+@media screen and (max-width: 375px) {
+  .component {
+    height: 512px;
+    width: 327px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .component .image {
+    height: 200px;
+    width: 327px;
+    border-radius: 10px 10px 0px 0px;
+    object-fit: cover;
+  }
+
+  .component .content > h1 {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+  }
+
+  .component .content > p {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.121875px;
+  }
+
+  .component .content {
+    padding: 36px 32px 20px;
+  }
+
+  .component .content .footer .share .hover {
+    bottom: 0;
+    right: -32px;
+    position: absolute;
+    width: 327px;
+    height: 64px;
+  }
+
+  .component .content .footer .share .hover > * {
+    margin-right: 16px;
+  }
+
+  .component .content .footer .share:hover .hover {
+    visibility: visible;
+  }
+
+  .component .content .footer .share:hover .hover::before {
+    visibility: hidden;
+  }
+}
